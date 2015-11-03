@@ -1,0 +1,72 @@
+prose:
+  rooturl: "_posts"
+  siteurl: "levichen.github.io"
+  media: "assets/images/blog"
+  metadata:
+    _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+          placeholder: "Input your title here"
+          type: "text"
+          
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+  
+
+# Site settings
+title: Levi's Blog
+tagline: 
+email: levichen@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Hi, I’m levi chen.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://levichen.github.io" # the base hostname & protocol for your site
+author: "Levi Chen"
+author_thumbnail: "/assets/images/avatar.jpg" # Author avatar
+# Theme customization - please change from the defaults!
+theme:
+  # Color for sidebar bar, links, etc
+  highlight_color: "#272935" #205081" # "#272935"
+  # Social media links, leave blank to ignore
+  social: 
+    github: levichen
+    facebook: chenjiunyi
+
+  # Enable share buttons on post footer
+  show_share_buttons: true
+
+  # Show author picure, name and social links on post footer
+  show_author_info: true
+
+  # Disqus comments manager - shortname
+  disqus_shortname: levichengithubio
+
+# Build settings
+#markdown: kramdown
+markdown: redcarpet
+
+# Permalinks
+permalink:        pretty
+
+# Pagination config
+paginate: 5
+
+# Files/Folders to be excluded from generated _site folder
+exclude: 
+  - CNAME
+  - Gemfile
+  - Rakefile
+  - README.md
+  - .gitignore
+  - .sass-cache
+  - Gemfile.lock
+
+# Sass conversion configs
+sass:
+  sass_dir: assets/css/_sass
+  style: :compressed
