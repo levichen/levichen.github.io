@@ -540,14 +540,17 @@ img {
   overflow: hidden;
 }
 
+/* Article link */
+.post a {
+    color: #428bca;
+}
+
 /* Article title / Page title */
 .post-title a {
   color: #272935;
   border-bottom-width: 2px;
 }
-.post a {
-    color: #428bca;
-}
+
 
 /* Put some padding arround post images */
 .post .post-content img, .page .post-content img {
