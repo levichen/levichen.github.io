@@ -542,7 +542,11 @@ img {
 
 /* Article title / Page title */
 .post-title a {
+  color: #272935;
   border-bottom-width: 2px;
+}
+.post a {
+    color: #428bca;
 }
 
 /* Put some padding arround post images */
