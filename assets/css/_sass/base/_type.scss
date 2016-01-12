@@ -74,11 +74,11 @@ h4, .h4 { font-size: $font-size-h4; }
 h5, .h5 { font-size: $font-size-h5; }
 h6, .h6 { font-size: $font-size-h6; }
 
-.post h2:not(:first-child) {
+.post h2:not(:first-of-type) {
      margin-top: 70px; 
 }
 
-.post .h2:not(:first-child) {
+.post .h2:not(:first-of-type) {
      margin-top: 70px; 
 }
 
