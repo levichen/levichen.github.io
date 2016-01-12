@@ -15,6 +15,7 @@ tags:
 ## 2. 先把 network-manager 關閉
 請先確保你是在本地端登錄，然後把 network-manager 關閉，
 不然在之後的節驟可能會出現錯誤
+
 ```
 [root@ubuntu ~]# /etc/init.d/network-manager stop
 ```
