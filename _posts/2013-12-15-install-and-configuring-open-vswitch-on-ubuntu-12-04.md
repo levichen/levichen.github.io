@@ -31,9 +31,9 @@ tags:
 因為這個版本的某些 code 跟原生的 linux code 有衝突到
 所以在這邊，請接以下這些標頭檔的 function 注解掉
 
-修改 datapath/linux/compat/include/linux/skbuff.h 的函式 skb_frag_page 跟 skb_reset_mac_len
-修改 datapath/linux/compat/include/linux/if.h 的變數 IFF_OVS_DATAPATH
-修改 datapath/linux/compat/include/linux/if_vlan.h 的函式 vlan_set_encap_proto
+- 修改 datapath/linux/compat/include/linux/skbuff.h 的函式 skb_frag_page 跟 skb_reset_mac_len
+- 修改 datapath/linux/compat/include/linux/if.h 的變數 IFF_OVS_DATAPATH
+- 修改 datapath/linux/compat/include/linux/if_vlan.h 的函式 vlan_set_encap_proto
 
 ## 5. 編譯 Open vSwitch
 ```
