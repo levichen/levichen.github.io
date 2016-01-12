@@ -3,7 +3,8 @@ layout: post
 published: true
 title: Install and Configuring Open vSwitch on Ubuntu 12.04
 tags: 
-  - "Visualization - Open vSwitch"
+  - Visualization
+  - Open vSwitch
 ---
 
 ## 1. 更新 apt-get 套件，並且安裝 Open vSwitch 需求的套件
