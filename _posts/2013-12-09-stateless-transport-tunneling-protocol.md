@@ -50,7 +50,7 @@ TSO 的實現需要一些基本條件，而這些其實是由軟體和硬體結�
 
 TSO 的支援主要有需要下列的幾步:
 
-1. 如果 NIC 支援 TSO 功能，需要宣告 NIC 支援 TSO， 這是通過以 NETIF_F_TSO 標誌設置 net_device structure 的 features 欄位來表明， 例如，在 benet(drivers/net/benet/be_main.c) 網卡的驅動程序中， 設置 NETIF_F_TSO 的代碼如下：
+1.如果 NIC 支援 TSO 功能，需要宣告 NIC 支援 TSO， 這是通過以 NETIF_F_TSO 標誌設置 net_device structure 的 features 欄位來表明， 例如，在 benet(drivers/net/benet/be_main.c) 網卡的驅動程序中， 設置 NETIF_F_TSO 的代碼如下：
 
 ```
 static void be_netdev_init(struct net_device *netdev) {
@@ -78,7 +78,8 @@ static void be_netdev_init(struct net_device *netdev) {
 這意味著只要 TCP 的數據大小不超過 64 KB，就不用在內核(kernel)分段，
 而只需一次性的推送到 NIC，由 NIC 去執行分段功能。
 
-2. 當一個 TCP 的 socket 被創建，其中一個職責就是設定該連線的能力， 在網路層的 socket 的表示是 struck sock，其中有一個欄位 sk_route_caps 標示該連接的能力， 在 TCP 的三向交握完成後，將基於 NIC 的能力和連接來設定該欄位。
+2.當一個 TCP 的 socket 被創建，其中一個職責就是設定該連線的能力， 在網路層的 socket 的表示是 struck sock，其中有一個欄位 sk_route_caps 標示該連接的能力， 在 TCP 的三向交握完成後，將基於 NIC 的能力和連接來設定該欄位。
+
 ```
 /* This will initiate an outgoing connection. */
 int tcp_v4_connect(struct sock *sk, struct sockaddr *uaddr, int addr_len) {
@@ -98,7 +99,7 @@ int tcp_v4_connect(struct sock *sk, struct sockaddr *uaddr, int addr_len) {
 需要這 2 個功能的原因是：Buffer 可能不在一個內存頁面上，所以需要分散 - 聚集功能，
 而分段後的每個分段需要重新計算 checksum，因此需要硬體支持校驗計算。
 
-3. 現在，一切的準備工作都已經做好了，當實際的數據需要傳輸時，需要使用我們設定好的 gso_max_size， 我們知道，TCP 向 IP 層發送數據會考慮 MSS，使得發送的 IP 包在 MTU 內，不用分段。 而 TSO 設定的 gso_max_size 就影響該過程，這主要是在計算 mss_now 字段時使用。 如果 Kernel 不支援 TSO 功能，mss_now 的最大值為 "MTU – HLENS"， 而在支援 TSO 的情況下，mss_now 的最大值為 "gso_max_size - HLENS"， 這樣，從網絡層帶驅動的路徑就被打通了。
+3.現在，一切的準備工作都已經做好了，當實際的數據需要傳輸時，需要使用我們設定好的 gso_max_size， 我們知道，TCP 向 IP 層發送數據會考慮 MSS，使得發送的 IP 包在 MTU 內，不用分段。 而 TSO 設定的 gso_max_size 就影響該過程，這主要是在計算 mss_now 字段時使用。 如果 Kernel 不支援 TSO 功能，mss_now 的最大值為 "MTU – HLENS"， 而在支援 TSO 的情況下，mss_now 的最大值為 "gso_max_size - HLENS"， 這樣，從網絡層帶驅動的路徑就被打通了。
 
 ## Ref.
 - http://networkheresy.com/2012/06/08/the-overhead-of-software-tunneling/
