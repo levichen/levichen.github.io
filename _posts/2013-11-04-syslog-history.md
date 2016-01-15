@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Syslog 記錄 history
 tags: 
-  - log
+  - Log
 ---
 
 現實生活中，有可能伺服器會遭到駭客的攻擊
