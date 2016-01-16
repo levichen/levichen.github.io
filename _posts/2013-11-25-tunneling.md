@@ -33,7 +33,7 @@ tags:
 相關設定均在 server 端即可完成，底層網路僅為傳遞封包通透使用，無需額外設定。
 
 ## Tunneling Protocol
-Wiki[1] 上的訂義為:
+Wiki 上的訂義為:
 > 是一個網路協議的載體。使用隧道的原因是在不兼容的網路上傳輸數據，或在不安全網路上提供一個安全路徑。
 穿隧協議可能使用數據加密來傳送不安全的負載協議。
 
@@ -47,7 +47,7 @@ Wiki[1] 上的訂義為:
 
 常見的 Tunneling 技術有:
 
-### 1. IP in IP [2] [3] [4]
+### 1. IP in IP
 其實說穿了就是把 IP layer(layer 3) 的 packet 再包一層 IP 的 packet，
 看似好像沒什麼學問，也浪費。
 但是其實不然，
@@ -58,7 +58,7 @@ Wiki[1] 上的訂義為:
 
 也可用來當作 IPv6 over IPv4 的 tuneling。
 
-### 2. Generic Routing Encapsulation(GRE) [5] [6]
+### 2. Generic Routing Encapsulation(GRE)
 和 IP in IP 類似，只是功能更強了一些，還支援 broadcast。
 
 ## 新一代的 Tunneling 技術有以下的優點
