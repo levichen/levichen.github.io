@@ -24,9 +24,9 @@ tags:
 Jan 27 22:12:02 client rot[2861]: just one test
 ```
 
-## check syslog-ng server (140.133.76.222)
+## check syslog-ng server
 
 ```
-[root@server2 ~]$ cat /var/log/syslog-ng/20100128/140.133.76.212/messages
+[root@server2 ~]$ cat /var/log/syslog-ng/20100128/ <server ip> /messages
 Jan 28 04:24:32 140.133.76.212 root[2861]: just one test
 ```
