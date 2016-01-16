@@ -7,9 +7,10 @@ tags:
 ---
 
 
+
 - Environment: centos 5.9
-- server IP:140.133.76.222
-- client IP:140.133.76.212
+- server IP: <server ip>
+- client IP: <client ip>
 
 ## Create dir and install pkgconfig
 
