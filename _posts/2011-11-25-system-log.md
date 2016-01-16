@@ -50,8 +50,8 @@ but…這些 log 最終要送去哪，就是靠 syslogd 這個 syslog.conf 來�
 三思而後行…
 
 ```
-  $ chattr +a /var/log/messages
-  $ lsattr /var/log/messages
+$ chattr +a /var/log/messages
+$ lsattr /var/log/messages
   —–a——- /var/log/messages
 ```
 
@@ -75,6 +75,7 @@ $ chattr -a /var/log/messages
 
 ```
 # /etc/sysconfig/iptables
+
 # 加入以下這行，對 port 514 放行  
   -A RH-Firewall-1-INPUT -m state –state NEW -m udp -p udp –dport 514 -j ACCEPT
 ```
@@ -104,6 +105,7 @@ apache 需要自己設定 log 的存法[3]
 
 ```
 # /etc/httpd/conf/httpd.conf
+
 # error log 的部分就是這樣修改，將 apache 的 log 委託給 syslogd 處理  
 # 然後 syslogd 又會將這個 log 導入到剛剛的 syslog server~~  
 ErrorLog syslog  
