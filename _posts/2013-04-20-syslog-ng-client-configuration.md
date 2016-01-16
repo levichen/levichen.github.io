@@ -28,5 +28,5 @@ Jan 27 22:12:02 client rot[2861]: just one test
 
 ```
 [root@server2 ~]$ cat /var/log/syslog-ng/20100128/ <server ip> /messages
-Jan 28 04:24:32 140.133.76.212 root[2861]: just one test
+Jan 28 04:24:32 <server ip> root[2861]: just one test
 ```
