@@ -74,10 +74,10 @@ Switch-Switch Tunnel 架構 下來我們要介紹的 tunnel 技術 VXLAN、NVGRE
 ![2013_11_25_2.png]({{site.baseurl}}/assets/images/blog/2013_11_25_2.png)
 
 接下來會一一依介紹幾個的 tunneling 技術
-[Generic Routing Encapsulation(GRE)](http://levichen.github.io/2013/11/26/generic-routing-encapsulation/)
-[Virtual eXtensible Local Area Network(VXLAN)](http://levichen.github.io/2013/11/26/virtual-extensible-local-area-network/)
-[Network Virtualization using Generic Routing Encapsulation(NVGRE)](http://levichen.github.io/2013/12/08/network-virtualization-using-generic-routing-encapsulation/)
-[Stateless Transport Tunneling Protocol[STT]](http://levichen.github.io/2013/12/09/stateless-transport-tunneling-protocol/)
+- [Generic Routing Encapsulation(GRE)](http://levichen.github.io/2013/11/26/generic-routing-encapsulation/)
+- [Virtual eXtensible Local Area Network(VXLAN)](http://levichen.github.io/2013/11/26/virtual-extensible-local-area-network/)
+- [Network Virtualization using Generic Routing Encapsulation(NVGRE)](http://levichen.github.io/2013/12/08/network-virtualization-using-generic-routing-encapsulation/)
+- [Stateless Transport Tunneling Protocol[STT]](http://levichen.github.io/2013/12/09/stateless-transport-tunneling-protocol/)
 
 
 ## Ref.
